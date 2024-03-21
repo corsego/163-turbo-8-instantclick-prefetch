@@ -16,6 +16,7 @@
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <meta name="turbo-prefetch" content="true">
   </head>
 
   <body>
@@ -23,7 +24,9 @@
       <div>
         <%= link_to "Home", root_path %>
         <%= link_to "Pricing", pricing_path %>
-        <%= link_to "Admin", admin_path %>
+        <%= link_to "Pricing POST", pricing_path, data: { turbo_method: :post } %>
+        <%= link_to "Superails.com", "https://superails.com" %>
+        <%= link_to "Admin", admin_path, data: { turbo_prefetch: false} %>
       </div>
       <hr class="my-12">
       <%= yield %>
