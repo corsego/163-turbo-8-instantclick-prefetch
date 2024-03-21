@@ -19,7 +19,13 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+    <main class="container mx-auto mt-28 px-5 flex flex-col">
+      <div>
+        <%= link_to "Home", root_path %>
+        <%= link_to "Pricing", pricing_path %>
+        <%= link_to "Admin", admin_path %>
+      </div>
+      <hr class="my-12">
       <%= yield %>
     </main>
   </body>
